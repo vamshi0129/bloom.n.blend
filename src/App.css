@@ -9,120 +9,122 @@
 .head {
   background-color: rgb(245, 230, 207);
   display: flex;
-  flex-direction: column;   
-  align-items: center;      
-  justify-content: center; 
-  padding-top: 30px;
-  padding-bottom: 20px; 
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 5%;
   width: 100%;
+  text-align: center;
 }
 
 h5 {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   color: rgb(47, 44, 44);
-  margin: 2px;
-  line-height: 2.2;
-  font-size: 15px;
+  margin: 0.3rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .logo {
-  width: 10%;
+  width: 12%;
+  max-width: 120px;
+  min-width: 60px;
   height: auto;
-  display: inline-block; /* Keep inline for text-align to work */
+  display: block;
+  margin-bottom: 1rem;
 }
 
 /* Background Section */
+
 .bg-section {
   position: relative;
-  height: auto;
-  background: none;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column; /* always stacked */
+  gap: 20px;              /* space between cards */
+  justify-content: center;
+  align-items: center;    /* center horizontally */
+  padding: 2% 5%;
 }
 
-/* Background Image Overlay */
-.bg-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('/images/bg1.jpeg') no-repeat center;
-  background-size: cover;
-  opacity: 0.2;
-  z-index: 0;
-}
-
-/* Box styling for containers & links */
 .bg-section > a {
   text-decoration: none;
-  color: inherit; /* Keep text color same as parent */
-}
-
-.bg-section > div,
-.bg-section > a {
+  color: inherit;
+  width: 90%;             /* wide cards but with margins */
+  max-width: 800px;       /* optional limit on very wide screens */
   position: relative;
   z-index: 1;
-  padding: 20px;
+  padding: 2%;
   border-radius: 12px;
   background: rgba(179, 163, 163, 0.8);
   color: rgb(64, 59, 59);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+} 
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/images/bg.jpg') no-repeat center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
 }
 
-/* Hover effect */
-.bg-section .container1:hover,
-.bg-section .container3:hover {
-  transform: translateX(100px); 
-  transition: 2s;
-/*   
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);  */
-}
-.bg-section .container2:hover {
-  transform: translateX(-100px); 
-  transition: 2s;
-/*   
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);  */
-}
 
-/* Optional Logo Spin for fun */
-@keyframes logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Hover effects only apply for non-touch devices */
+@media (hover: hover) {
+  .bg-section .container1:hover {
+    transform: translateX(10%);
+  }
+  .bg-section .container2:hover {
+    transform: translateX(-10%);
+  }
+  .bg-section .container3:hover {
+    transform: translateX(10%);
   }
 }
 
-/* Utility classes */
-.card {
-  padding: 2em;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logo {
+    width: 20%;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .bg-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bg-section > a {
+    flex: 1 1 100%;
+    padding: 5%;
+    max-width: 100%;
+  }
+
+  .bg-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .bg-section p {
+    font-size: 1rem;
+  }
 }
 
-.read-the-docs {
-  color: #888;
-}
+@media (max-width: 480px) {
+  .logo {
+    width: 25%;
+  }
 
-.slide-in,
-.slide-out {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: top; /* Scale from top */
-  z-index: 9999;
-}
+  .bg-section h3 {
+    font-size: 1rem;
+  }
 
-.slide-in {
-  background: rgb(245, 230, 207); /* Change to match theme */
-}
-
-.slide-out {
-  background: rgb(245, 230, 207);
-  transform-origin: bottom; /* Animates from bottom */
+  .bg-section p {
+    font-size: 0.9rem;
+  }
 }
