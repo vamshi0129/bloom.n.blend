@@ -7,18 +7,16 @@ import Footer from "./Footer";
 // Pages
 import LiveWorkshop from "./LiveWorkshop";
 import UpcomingWorkshop from "./UpcomingWorkshop";
-import RequestWorkshop from "./RequestWorkshop"; // now points to your new form UI
-
+import RequestWorkshop from "./RequestWorkshop";
 
 // Transition HOC
 import trans from "./trans";
 
-// Wrap pages with transition effect
+// Wrap pages
 const LiveWithTrans = trans(LiveWorkshop);
 const UpcomingWithTrans = trans(UpcomingWorkshop);
 const RequestWithTrans = trans(RequestWorkshop);
 
-// Home page with 3 containers
 function Home() {
   return (
     <>
@@ -27,17 +25,11 @@ function Home() {
           src="/images/logo.jpg"
           className="logo"
           alt="Logo"
-          style={{
-            width: "10%",
-            height: "auto",
-            display: "block",
-            alignContent: "center",
-          }}
         />
         <h5>Where passions bloom & ideas blend</h5>
         <h5>
-          Welcome to a world of creativity — art, craft, and baking workshops
-          designed for YOU!
+          Welcome to a world of creativity — art, craft, and baking
+          workshops designed for YOU!
         </h5>
       </div>
 
@@ -45,7 +37,7 @@ function Home() {
         <Link to="/live" className="container1">
           <h3>LIVE WORKSHOP</h3>
           <p>
-            Join our live sessions and create magic together — hands-on,
+            Join our live sessions and create magic together — hands‑on,
             interactive, and fun!
           </p>
         </Link>
@@ -61,8 +53,7 @@ function Home() {
         <Link to="/request" className="container3">
           <h3>REQUEST A WORKSHOP</h3>
           <p>
-            Have an idea? Let us design a workshop just for you and your
-            friends.
+            Have an idea? Let us design a workshop just for you and your friends.
           </p>
         </Link>
       </div>
@@ -75,10 +66,7 @@ export default function App() {
 
   return (
     <>
-      {/* Navbar always visible */}
       <Navbar />
-
-      {/* AnimatePresence enables Framer Motion page transition animations */}
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -87,8 +75,6 @@ export default function App() {
           <Route path="/request" element={<RequestWithTrans />} />
         </Routes>
       </AnimatePresence>
-
-      {/* Footer always visible */}
       <Footer />
     </>
   );

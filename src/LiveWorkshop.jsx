@@ -182,8 +182,8 @@ export default function LiveWorkshop() {
               <input
                 type="number"
                 name="passes"
-                min={1}
-                max={10}
+                min={0}
+                max={30}
                 value={formData.passes}
                 onChange={handleChange}
                 required

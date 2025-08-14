@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="navbar">
       {/* Logo */}
       <div className="nav-logo">
-        <img src="/images/logo.jpg" alt="Logo" />
+        <img src="/images/logo_bg.png" alt="Logo" />
         <span>Bloom & Blend</span>
       </div>
 
