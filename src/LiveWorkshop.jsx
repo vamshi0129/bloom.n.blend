@@ -1,40 +1,7 @@
 import React, { useState } from "react";
 
 export default function LiveWorkshop() {
-  const pricePerPass = 349;
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    passes: 1,
-  });
-  const [screenshot, setScreenshot] = useState(null);
-  const [showForm, setShowForm] = useState(false); // New state for form visibility
-
-  const upiQRCode = "/images/QR.jpg";
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: name === "passes" ? Math.max(0, Math.min(30, Number(value))) : value,
-    }));
-  };
-
-  const handleFileChange = (e) => {
-    setScreenshot(e.target.files[0]);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nMobile: ${formData.mobile}\nPasses: ${
-        formData.passes
-      }\nTotal Price: Rs ${formData.passes * pricePerPass}\nScreenshot: ${
-        screenshot ? screenshot.name : "No file uploaded"
-      }`
-    );
-  };
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div
@@ -101,7 +68,9 @@ export default function LiveWorkshop() {
             }}
           />
           <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            <p style={{ fontWeight: "bold", fontSize: "1.2em" }}>Canvas Painting Workshop</p>
+            <p style={{ fontWeight: "bold", fontSize: "1.2em" }}>
+              Canvas Painting Workshop
+            </p>
             <p>Rs 349/- Per pass</p>
             <p>on 17th August from 11AM - 2PM</p>
             <p>At Belloso Cafe, Uppal, Hyderabad</p>
@@ -117,135 +86,41 @@ export default function LiveWorkshop() {
                 height: "fit-content",
                 alignSelf: "start",
               }}
-              onClick={() => setShowForm(true)} // Show form on click
+              onClick={() => setShowForm(true)}
             >
               Buy Pass
             </button>
           </div>
         </div>
 
-        {/* Form appears only when Buy Pass is clicked */}
+        {/* Show Google Form when button is clicked */}
         {showForm && (
-          <form
-            onSubmit={handleSubmit}
+          <div
             style={{
-              backgroundColor: "rgba(255, 255, 255, 0.85)",
+              backgroundColor: "rgba(255, 255, 255, 0.9)",
               padding: "20px",
               borderRadius: "10px",
-              maxWidth: "400px",
-              display: "flex",
-              flexDirection: "column",
-              gap: "15px",
-              boxSizing: "border-box",
+              flex: "1 1 400px",
             }}
           >
-            <h2>Buy Pass</h2>
-
-            <label style={{ display: "flex", flexDirection: "column", fontWeight: "bold" }}>
-              Name:
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                style={inputStyle}
-              />
-            </label>
-
-            <label style={{ display: "flex", flexDirection: "column", fontWeight: "bold" }}>
-              Email:
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                style={inputStyle}
-              />
-            </label>
-
-            <label style={{ display: "flex", flexDirection: "column", fontWeight: "bold" }}>
-              Mobile:
-              <input
-                type="tel"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                required
-                style={inputStyle}
-              />
-            </label>
-
-            <label style={{ display: "flex", flexDirection: "column", fontWeight: "bold" }}>
-              Number of Passes:
-              <input
-                type="number"
-                name="passes"
-                min={0}
-                max={30}
-                value={formData.passes}
-                onChange={handleChange}
-                required
-                style={inputStyle}
-              />
-            </label>
-
-            <p style={{ fontWeight: "bold" }}>
-              Total Price: Rs {formData.passes * pricePerPass}
-            </p>
-
-            
-
-            <div style={{ textAlign: "center", marginTop: "10px" }}>
-              <p style={{ marginBottom: "10px", fontWeight: "bold" }}>
-                Scan UPI QR Code for Payment
-              </p>
-              <img
-                src={upiQRCode}
-                alt="UPI QR Code"
-                style={{ width: "150px", height: "150px", objectFit: "contain" }}
-              />
-            </div>
-
-            <label style={{ display: "flex", flexDirection: "column", fontWeight: "bold" }}>
-              Upload Screenshot:
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
-                required
-                style={{ marginTop: "5px" }}
-              />
-              {screenshot && <small>Selected file: {screenshot.name}</small>}
-            </label>
-
-            <button
-              type="submit"
+            <h2 style={{ marginBottom: "20px" }}>Pass Booking Form</h2>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSemlu67aO5VPCwwDDaePXS4iwmMPApnclPV1YRzhRTBlvaDXw/viewform?embedded=true"
               style={{
-                backgroundColor: "grey",
-                color: "#fff",
+                width: "100%",
+                height: "1000px",
                 border: "none",
-                padding: "10px 20px",
-                borderRadius: "5px",
-                cursor: "pointer",
-                fontWeight: "bold",
-                marginTop: "10px",
               }}
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Pass Buying Form"
             >
-              Submit
-            </button>
-          </form>
+              Loading…
+            </iframe>
+          </div>
         )}
       </div>
     </div>
   );
 }
-
-// shared style
-const inputStyle = {
-  padding: "8px",
-  marginTop: "5px",
-  borderRadius: "4px",
-  border: "1px solid #ccc",
-};
