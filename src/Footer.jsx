@@ -3,15 +3,13 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-about">
+      <div className="footer-content">
         <h3>About Us</h3>
         <p>
           We bring your creativity to life through interactive workshops in art,
           craft, and baking. Join us to learn, create, and share your passion!
         </p>
-      </div>
 
-      <div className="footer-contact">
         <h3>Contact Us</h3>
         <p>
           Email:{" "}
