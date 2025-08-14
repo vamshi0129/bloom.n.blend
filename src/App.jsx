@@ -21,17 +21,21 @@ function Home() {
   return (
     <>
       <div className="head">
-        <img
-          src="/images/logo.jpg"
-          className="logo"
-          alt="Logo"
-        />
+        <div className="logo-title">
+          <img
+            src="/images/logo_bg.png"
+            className="logo"
+            alt="Logo"
+          />
+          <span className="title">Bloom & Blend</span>
+        </div>
+
         <h5>Where passions bloom & ideas blend</h5>
         <h5>
           Welcome to a world of creativity — art, craft, and baking
           workshops designed for YOU!
         </h5>
-      </div>
+      
 
       <div className="bg-section">
         <Link to="/live" className="container1">
@@ -56,6 +60,7 @@ function Home() {
             Have an idea? Let us design a workshop just for you and your friends.
           </p>
         </Link>
+      </div>
       </div>
     </>
   );
