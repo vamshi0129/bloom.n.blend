@@ -51,29 +51,32 @@
 
 @media (max-width: 600px) {
   .footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.6rem;              /* smaller space between About Us & Contact Us */
-    padding: 0.8rem 0.5rem;   /* reduce top/bottom whitespace */
+    flex-direction: row;           
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;                 
+    padding: 0.5rem 0.5rem;        
+    text-align: left;            
   }
 
   .footer-about,
   .footer-contact {
-    margin: 0 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex: 1 1 48%;                  
+    min-width: unset;             
+    margin: 0;
   }
 
   .footer h3 {
-    font-size: 1rem;          /* slightly smaller headings on mobile */
-    margin-bottom: 0.3rem;    /* less space below headings */
+    font-size: 0.95rem;             
+    margin-bottom: 0.2rem;           
   }
 
   .footer p {
-    font-size: 0.85rem;       /* smaller paragraph text */
-    line-height: 1.3;         /* tighter paragraph spacing */
-    margin-bottom: 0.3rem;    /* less gap between paragraphs */
+    font-size: 0.8rem;             
+    line-height: 1.2;              
+    margin-bottom: 0.2rem;           
   }
 }
+
 
