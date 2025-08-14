@@ -14,6 +14,9 @@
 .footer-contact {
   flex: 1 1 300px;
   min-width: 250px;
+  flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .footer h3 {
@@ -50,23 +53,27 @@
   .footer {
     flex-direction: column;
     text-align: center;
-    gap: 0.8rem;              /* smaller gap between sections */
-    padding: 0.8rem 0.5rem;   /* reduce top/bottom padding */
+    gap: 0.6rem;              /* smaller space between About Us & Contact Us */
+    padding: 0.8rem 0.5rem;   /* reduce top/bottom whitespace */
   }
 
   .footer-about,
   .footer-contact {
     margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .footer h3 {
-    font-size: 1rem;          /* slightly smaller titles */
-    margin-bottom: 0.4rem;    /* less space below heading */
+    font-size: 1rem;          /* slightly smaller headings on mobile */
+    margin-bottom: 0.3rem;    /* less space below headings */
   }
 
   .footer p {
     font-size: 0.85rem;       /* smaller paragraph text */
-    line-height: 1.3;         /* tighter line spacing */
-    margin-bottom: 0.4rem;    /* remove big gaps */
+    line-height: 1.3;         /* tighter paragraph spacing */
+    margin-bottom: 0.3rem;    /* less gap between paragraphs */
   }
 }
+
