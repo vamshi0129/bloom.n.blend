@@ -17,7 +17,7 @@ export default function LiveWorkshop() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "passes" ? Math.max(1, Math.min(10, Number(value))) : value,
+      [name]: name === "passes" ? Math.max(0, Math.min(30, Number(value))) : value,
     }));
   };
 
