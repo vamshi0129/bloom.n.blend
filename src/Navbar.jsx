@@ -15,13 +15,11 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      {/* Logo */}
-      <div className="nav-logo">
+      <NavLink to="/" className="nav-logo" onClick={closeMenu}>
         <img src="/images/logo_bg.png" alt="Logo" />
         <span>Bloom & Blend</span>
-      </div>
+      </NavLink>
 
-      {/* Hamburger Icon */}
       <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
