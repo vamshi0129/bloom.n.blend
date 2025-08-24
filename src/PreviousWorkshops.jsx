@@ -67,7 +67,7 @@ export default function UpcomingWorkshop() {
             </p>
             <p style={{ margin: 0 }}>Held on 17th August</p>
             <p style={{ margin: 0 }}>At Belloso Cafe, Uppal, Hyderabad</p>
-{/*             <button
+            {/* <button
               style={{
                 backgroundColor: "grey",
                 color: "#fff",
@@ -88,4 +88,3 @@ export default function UpcomingWorkshop() {
     </div>
   );
 }
-
