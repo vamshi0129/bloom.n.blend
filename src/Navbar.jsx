@@ -40,7 +40,7 @@ export default function Navbar() {
         </li>
         <li>
           <NavLink to="/upcoming" onClick={closeMenu}>
-            Upcoming Workshops
+            Previous Workshops
           </NavLink>
         </li>
         <li>

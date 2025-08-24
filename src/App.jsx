@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 // Pages
 import LiveWorkshop from "./LiveWorkshop";
-import UpcomingWorkshop from "./UpcomingWorkshop";
+import UpcomingWorkshop from "./PreviousWorkshops";
 import RequestWorkshop from "./RequestWorkshop";
 
 // Transition HOC
@@ -47,10 +47,9 @@ function Home() {
         </Link>
 
         <Link to="/upcoming" className="container2">
-          <h3>UPCOMING WORKSHOP</h3>
+          <h3>Previous WORKSHOP</h3>
           <p>
-            Stay tuned for our next creative journey — register in advance to
-            secure your spot.
+            Have a look at our Previous workshops !
           </p>
         </Link>
 
