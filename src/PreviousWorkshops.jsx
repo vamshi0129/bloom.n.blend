@@ -67,7 +67,7 @@ export default function UpcomingWorkshop() {
             </p>
             <p style={{ margin: 0 }}>Held on 17th August</p>
             <p style={{ margin: 0 }}>At Belloso Cafe, Uppal, Hyderabad</p>
-            <button
+{/*             <button
               style={{
                 backgroundColor: "grey",
                 color: "#fff",
@@ -81,10 +81,11 @@ export default function UpcomingWorkshop() {
               onClick={() => window.open("https://photos.app.goo.gl/F2bBN8nfvYQqk8e6A", "_blank")}
             >
               Click for Photos !
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
