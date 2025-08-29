@@ -11,6 +11,10 @@ export default function Footer() {
         </p>
 
         <h3>Contact Us</h3>
+        <a id="insta" href="https://www.instagram.com/bloom.n.blend?utm_source=ig_web_button_share_sheet&igsh=cTB0NnlvM29yenpi" target="_blank" 
+   rel="noopener noreferrer">
+        Follow us on Instagram
+        </a>
         <p>
           Email:{" "}
           <a href="mailto:bloom.n.blend@gmail.com">
