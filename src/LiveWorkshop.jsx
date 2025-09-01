@@ -30,9 +30,20 @@ export default function LiveWorkshop() {
         src="/images/paint_bg.mp4"
         type="video/mp4"
       />
-
+      <div style={{
+        position: "relative",
+          zIndex: 1,
+          color: "#000",
+          padding: "20px",
+          display: "flex",
+          gap: "30px",
+          alignItems:"flex-start",
+          justifyContent: "center",
+          alignContent:"center",
+          flexWrap: "wrap", 
+      }}><h1>Stay Tuned for the updates</h1></div>
       {/* Content overlay */}
-      <div
+      {/* <div
         style={{
           position: "relative",
           zIndex: 1,
@@ -133,7 +144,7 @@ export default function LiveWorkshop() {
         </div>
       </div>
         
-      </div>
+      </div> */}
     </div>
   );
 }

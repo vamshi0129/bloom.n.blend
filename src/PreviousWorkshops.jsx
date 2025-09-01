@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function UpcomingWorkshop() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <div
       style={{
@@ -10,7 +12,7 @@ export default function UpcomingWorkshop() {
         paddingBottom: "40px",
       }}
     >
-      {/* Background Video with Reduced Opacity */}
+      {/* Background Video */}
       <video
         autoPlay
         loop
@@ -30,15 +32,22 @@ export default function UpcomingWorkshop() {
         type="video/mp4"
       />
 
-      {/* Centered Workshop Card */}
+      {/* Workshops Container */}
       <div
         style={{
-          minHeight: "100vh",
+          position: "relative",
+          zIndex: 1,
+          color: "#000",
+          padding: "20px",
           display: "flex",
+          gap: "30px",
+          alignItems: "flex-start",
           justifyContent: "center",
-          alignItems: "center",
+          alignContent: "center",
+          flexWrap: "wrap",
         }}
       >
+        {/* Canvas Painting Workshop */}
         <div
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.4)",
@@ -67,24 +76,81 @@ export default function UpcomingWorkshop() {
             </p>
             <p style={{ margin: 0 }}>Held on 17th August</p>
             <p style={{ margin: 0 }}>At Belloso Cafe, Uppal, Hyderabad</p>
-            {/* <button
+            <button
               style={{
                 backgroundColor: "grey",
-                color: "#fff",
+                color: "#000",
                 border: "none",
                 padding: "10px 20px",
                 borderRadius: "5px",
                 cursor: "pointer",
                 fontWeight: "bold",
-                alignSelf: "flex-start",
+                height: "fit-content",
+                alignSelf: "start",
               }}
-              onClick={() => window.open("https://photos.app.goo.gl/F2bBN8nfvYQqk8e6A", "_blank")}
+              onClick={() =>window.open("https://photos.app.goo.gl/Z1btqxdnmHQqxUN68", "_blank")}
             >
-              Click for Photos !
-            </button> */}
+              Click for Photos..!
+            </button>
+          </div>
+        </div>
+
+        {/* Tote Bag Painting Workshop */}
+        <div
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.4)",
+            padding: "24px",
+            borderRadius: "12px",
+            display: "flex",
+            alignItems: "center",
+            gap: "24px",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+          }}
+        >
+          <img
+            src="/images/tote_bag.png"
+            alt="Tote Bag painting"
+            style={{
+              width: "180px",
+              height: "250px",
+              objectFit: "cover",
+              borderRadius: "8px",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            }}
+          />
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            <p style={{ fontWeight: "bold", fontSize: "1.3em", margin: 0 }}>
+              Tote Bag Painting Workshop
+            </p>
+            <p style={{ margin: 0 }}>
+              on <strong>31th August</strong>
+            </p>
+            <p style={{ margin: 0 }}>
+              At Paper Crown Cafe, Jubliee Hills, Hyderabad
+            </p>
+            <p style={{ margin: 0 }}>11AM - 2PM</p>
+
+            <button
+              style={{
+                backgroundColor: "grey",
+                color: "#000",
+                border: "none",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                cursor: "pointer",
+                fontWeight: "bold",
+                height: "fit-content",
+                alignSelf: "start",
+              }}
+              onClick={() =>window.open("https://photos.app.goo.gl/n5xYn7rKvToSEobW6", "_blank")}
+            >
+              Click for Photos..!
+            </button>
           </div>
         </div>
       </div>
+
+      
     </div>
   );
 }
