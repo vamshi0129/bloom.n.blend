@@ -41,7 +41,8 @@ export default function LiveWorkshop() {
           justifyContent: "center",
           alignContent:"center",
           flexWrap: "wrap", 
-      }}><h1>Stay Tuned for the updates</h1></div>
+      }}>
+      </div>
       {/* Content overlay */}
       <div
         style={{
