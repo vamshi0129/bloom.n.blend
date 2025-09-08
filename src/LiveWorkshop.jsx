@@ -43,7 +43,7 @@ export default function LiveWorkshop() {
           flexWrap: "wrap", 
       }}><h1>Stay Tuned for the updates</h1></div>
       {/* Content overlay */}
-      {/* <div
+      <div
         style={{
           position: "relative",
           zIndex: 1,
@@ -77,7 +77,7 @@ export default function LiveWorkshop() {
           }}
         >
           <img
-            src="/images/tote_bag.png"
+            src="/images/Dance.png"
             alt="Canvas painting"
             style={{
               width: "180px",
@@ -89,11 +89,12 @@ export default function LiveWorkshop() {
           />
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             <p style={{ fontWeight: "bold", fontSize: "1.3em", margin: 0 }}>
-              Tote Bag Painting Workshop
+              Dance Workshop
             </p>
-            <p style={{ margin: 0 }}>on <strong>31th August</strong></p>
-            <p style={{ margin: 0 }}>At Paper Crown Cafe, Jubliee Hills, Hyderabad</p>
-            <p style={{ margin: 0 }}>11AM - 2PM</p>
+            <p style={{ margin: 0 }}>on <strong>14th September</strong></p>
+            <p style={{ margin: 0 }}>At ETSB Dance Studio , Himayatnagar , Hyderabad</p>
+            <p style={{ margin: 0 }}>Slot 1 : 11AM - 12:30PM </p>
+            <p style={{ margin: 0 }}>Slot 2 :  2PM - 3:30PM</p>
 
              <button
               style={{
@@ -124,27 +125,19 @@ export default function LiveWorkshop() {
             }}
           >
             <h2 style={{ marginBottom: "20px" }}>Pass Booking Form</h2>
-            <iframe
-            
-              src="https://docs.google.com/forms/d/e/1FAIpQLSewl9lM-ezvjmUkB1OSP9_bOu44odT8oLDE030NBROKn_c5Fg/viewform?embedded=true"
-              style={{
-                width: "100%",
-                height: "1000px",
-                border: "none",
-              }}
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-              title="Pass Buying Form"
-            >
-              Loading…
-            </iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEpDBy1tMTHlLNSJ3vW68C0B-Pyyg27TV6Bzk649aqes-KTA/viewform?embedded=true" 
+            width="640" 
+            height="2361" 
+            frameborder="0"
+            marginheight="0" 
+            marginwidth="0"
+            >Loading…</iframe>
           </div>
         )}
         </div>
       </div>
         
-      </div> */}
+      </div>
     </div>
   );
 }
