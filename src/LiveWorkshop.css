@@ -1,0 +1,129 @@
+/* Background */
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Content Overlay */
+.overlay {
+  position: relative;
+  z-index: 1;
+  color: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+/* Card */
+.card {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.workshop-img {
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Text details */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+/* Button */
+.btn {
+  background-color: grey;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: start;
+}
+
+/* Booking Form */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 100%;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* keeps aspect ratio */
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 🔹 Responsive Fixes */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .workshop-img {
+    max-width: 140px;
+    height: auto;
+  }
+
+  .details {
+    align-items: center;
+  }
+
+  .btn {
+    align-self: center;
+  }
+}
