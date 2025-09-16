@@ -18,7 +18,8 @@ export default function LiveWorkshop() {
       />
 
       {/* Content overlay */}
-      <div className="overlay">
+      <h1>Stay tuned for the updates ! </h1>
+      {/* <div className="overlay">
         <div className="card">
           <img
             src="/images/Dance.png"
@@ -52,7 +53,7 @@ export default function LiveWorkshop() {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
