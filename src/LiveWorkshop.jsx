@@ -18,21 +18,20 @@ export default function LiveWorkshop() {
       />
 
       {/* Content overlay */}
-      <h1>Stay tuned for the updates ! </h1>
-      {/* <div className="overlay">
+      {/* <h1>Stay tuned for the updates ! </h1> */}
+      <div className="overlay">
         <div className="card">
           <img
-            src="/images/Dance.png"
+            src="/images/tissue.jpg"
             alt="Dance Workshop"
             className="workshop-img"
           />
 
           <div className="details">
-            <p className="title">Dance Workshop</p>
-            <p>on <strong>14th September</strong></p>
-            <p>At ETSB Dance Studio , Himayatnagar , Hyderabad</p>
-            <p>Slot 1 : 11AM - 12:30PM </p>
-            <p>Slot 2 :  2PM - 3:30PM</p>
+            <p className="title">Tissue Art Workshop</p>
+            <p>on <strong>12th October</strong></p>
+            <p>At Belloso Cafe , Uppal, Hyderabad</p>
+            <p>@11AM </p>
 
             <button className="btn" onClick={() => setShowForm(true)}>
               Buy Pass
@@ -43,17 +42,12 @@ export default function LiveWorkshop() {
             <div className="form-container">
               <h2>Pass Booking Form</h2>
               <div className="iframe-wrapper">
-                <iframe
-                  src="https://docs.google.com/forms/d/e/1FAIpQLScEpDBy1tMTHlLNSJ3vW68C0B-Pyyg27TV6Bzk649aqes-KTA/viewform?embedded=true"
-                  title="Pass Booking Form"
-                >
-                  Loading…
-                </iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8be_jpUuoruslpgnGBo5RhspXBY1skd56mfUcwnueutb8-Q/viewform?embedded=true" width="640" height="2137" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
               </div>
             </div>
           )}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
