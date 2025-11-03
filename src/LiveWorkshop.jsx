@@ -18,8 +18,8 @@ export default function LiveWorkshop() {
       />
 
       {/* Content overlay */}
-      {/* <h1>Stay tuned for the updates ! </h1> */}
-      <div className="overlay">
+      <h1>Stay tuned for the updates ! </h1>
+      {/* <div className="overlay">
         <div className="card">
           <video 
             autoPlay
@@ -30,12 +30,6 @@ export default function LiveWorkshop() {
             alt="Dance Workshop"
             className="workshop-img"
           />
-
-          {/* <img
-            src="/images/diya.png"
-            alt="Dance Workshop"
-            className="workshop-img"
-          /> */}
 
           <div className="details">
             <p className="title">Diya Making Workshop</p>
@@ -57,7 +51,7 @@ export default function LiveWorkshop() {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
