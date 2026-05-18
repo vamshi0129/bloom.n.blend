@@ -18,8 +18,8 @@ export default function LiveWorkshop() {
       />
 
       {/* Content overlay */}
-      {/* <h1>Stay tuned for the updates ! </h1> */}
-      <div className="overlay">
+      <h1>Stay tuned for the updates ! </h1>
+      {/* <div className="overlay">
         <div className="card">
           <img src="/images/kitsugi.png" alt="Kintsugi Art Workshop" className="workshop-img" />
 
@@ -43,7 +43,7 @@ export default function LiveWorkshop() {
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
